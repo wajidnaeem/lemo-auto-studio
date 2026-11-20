@@ -15,7 +15,8 @@ A. **Collect results of earlier posts.** `git pull`. For each board card with `s
      set `upload_error` with the run link, email the user.
 
 B. **Start new posts.** `ArtifactData query` collection `films` where `status == "approved"`. None → stop.
-   Only inside a slot: Pakistan time (UTC+5) within 60 min after one of channel.yaml `post_slots_pkt`, or approved over 6 h ago.
+   The scheduled task runs at 19:31, 21:31 and 23:31 Pakistan time. Post at the 19:31 and 21:31 runs; at 23:31 only collect
+   results (step A), unless a film was approved over 6 h ago.
    One film per slot, oldest first:
    1. Make sure `films/<id>/post.json` is in the repo (the Editor wrote it) and you have `reel_9x16.mp4` + `thumb.jpg`:
       download them from Google Drive (`download_file_content` with post.json `drive_file_id`) if this session doesn't have them.

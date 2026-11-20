@@ -20,7 +20,7 @@ Board's database. The cloud machine is wiped after the run, so **commit and push
 8. Update `history.json`, commit (`studio: <date> <slug>`), push.
 9. If `approval: auto-if-passed` and every check passed, set the card to `approved` right away.
 
-### `upload`: post approved films (hourly)
+### `upload`: post approved films (19:31, 21:31, 23:31 PKT)
 Run the **Uploader** only. No setup needed (no lemo-opuscar). It collects links of films being posted, then hands newly
 `approved` films to the `post-film` GitHub Action (official YouTube and Meta APIs; keys are GitHub secrets, never seen by Claude).
 
