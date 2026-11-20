@@ -18,9 +18,10 @@ You are the Editor of Lemo Auto-Studio. Input: the Film Maker's project folder.
 3. **Copy**: write `films/<date>-<slug>/post.json` in this repo:
    `{title, caption (Urdu in Latin letters, then English, max 2 lines each + 1 question to drive comments),
      hashtags (8-12, mix of broad and niche), youtube_title (≤ 70 chars), youtube_description, checks, made_for_kids}`.
-4. **Hosting**: upload reel_9x16.mp4 to Google Drive (`create_file` with base64Content as a file reference
-   `sha256:<hex>:<abs path>`, contentMimeType video/mp4, disableConversionToGoogleType true) into a folder
-   "Lemo Auto-Studio" (create it once; keep its id in channel.yaml `drive_folder_id`). Share it "anyone with the link
-   can view" so Zapier can fetch it. Save the file id and link in post.json.
+4. **Hosting** (GitHub Releases of this private repo; no Google Drive needed):
+   `gh api repos/wajidnaeem/lemo-auto-studio/releases -f tag_name=film-<date>-<slug> -f name="<title>" -f body="Film <date>-<slug>" -F draft=false -F prerelease=true`
+   → release id; then upload `reel_9x16.mp4` (video/mp4) and `thumb.jpg` (image/jpeg):
+   `gh api -X POST "https://uploads.github.com/repos/wajidnaeem/lemo-auto-studio/releases/<rid>/assets?name=reel_9x16.mp4" -H "Content-Type: video/mp4" --input <file>`.
+   Save `release_tag` in post.json. If `uploads.github.com` refuses, try `gh release upload film-<date>-<slug> <files>`.
 5. Copy to this repo's `films/<date>-<slug>/`: post.json, thumb.jpg, TREATMENT.md, FACTS.md, CREDITS, subtitles, and the
    source files (no mp4/wav).

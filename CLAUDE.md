@@ -8,7 +8,7 @@ Board's database. The cloud machine is wiped after the run, so **commit and push
 ## Run modes (the scheduled task's prompt names one)
 
 ### `nightly`: make today's film
-1. `sh scripts/setup.sh` (installs lemo-opuscar into `~/lemo-opuscar`, ~5-8 min). If it fails, email the user the error and stop.
+1. `sh scripts/setup.sh` (installs lemo-opuscar into `~/lemo-opuscar`, ~5-8 min). If it fails, report the error and stop.
 2. Read `channel.yaml`, `history.json`, `research/what-works.md`.
 3. **Changes first**: query the Approval Board (`ArtifactData` `query`, collection `films`, where `status == "changes"`).
    For each, the Film Maker revises that film from the user's `note` instead of making a new one (max 1 per run),
@@ -16,7 +16,7 @@ Board's database. The cloud machine is wiped after the run, so **commit and push
 4. Otherwise: **Viral Researcher** → `ideas/<date>.md` with the pick.
 5. **Film Maker** → `~/lemo-opuscar/films/<date>-<slug>/` with the finished film.
 6. **Editor** → checks + `films/<date>-<slug>/` in this repo (small files only, see below) + `post.json`.
-7. **Approval** → board card + email.
+7. **Approval** → board card + notification (push / email if those tools exist, else the final report).
 8. Update `history.json`, commit (`studio: <date> <slug>`), push.
 9. If `approval: auto-if-passed` and every check passed, set the card to `approved` right away.
 
@@ -28,10 +28,10 @@ Run the **Uploader** only. No setup needed (no lemo-opuscar). It collects links 
 Run the **Competitor Analyst**, commit `research/what-works.md`, push.
 
 ## Rules for every run
-- Work without asking questions: nobody is watching. On a hard failure, email the user what failed and stop cleanly.
+- Work without asking questions: nobody is watching. On a hard failure, say what failed at the top of the final report (it reaches the user's phone) and stop cleanly.
 - Never post anything that is not `approved` on the board (unless `approval: auto-if-passed` as above).
 - Original characters only; never copyrighted characters, logos, songs or real people's likenesses.
 - Follow the safety filter in `channel.yaml` (`safety_skip`).
-- Big files (mp4 over 20 MB) never go into git: they go to Google Drive (Editor). Keep in git: TREATMENT.md, source code,
+- Big files (mp4, wav) never go into git commits: videos go to the repo's GitHub Releases (Editor). Keep in git: TREATMENT.md, source code,
   lines.json, score.py, mix.py, CREDITS, post.json, thumb.jpg, subtitles.
 - Report at the end of the run in 3-5 lines: what was made, checks, board link.
