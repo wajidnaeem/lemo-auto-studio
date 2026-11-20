@@ -1,0 +1,9 @@
+[
+{"id":"N1","text":"एक गरम दिन... और एक प्यासा बाग़।","voice":"hm_omega","lang":"hi","speed":0.9,"en":"One hot day... and a thirsty garden."},
+{"id":"P1","text":"बादल भैया, थोड़ा पानी दो ना!","voice":"hf_alpha","lang":"hi","speed":1.0,"en":"Brother Cloud, please give me some water!"},
+{"id":"B1","text":"अभी लो!","voice":"hm_psi","lang":"hi","speed":1.0,"en":"Coming right up!"},
+{"id":"B2","text":"अरे! मैं तो बहुत छोटा हूँ।","voice":"hm_psi","lang":"hi","speed":0.92,"en":"Oh no! I'm much too small."},
+{"id":"P2","text":"हिम्मत मत हारो! चलो, साथ में गाएँ!","voice":"hf_alpha","lang":"hi","speed":1.0,"en":"Don't give up! Come on, let's sing together!"},
+{"id":"B3","text":"वाह! बारिश आ गई!","voice":"hm_psi","lang":"hi","speed":1.0,"en":"Hooray! The rain is here!"},
+{"id":"N2","text":"दोस्ती और हिम्मत से, सब कुछ मुमकिन है!","voice":"hm_omega","lang":"hi","speed":0.92,"en":"With friendship and courage, anything is possible!"}
+]

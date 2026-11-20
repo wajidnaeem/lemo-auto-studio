@@ -1,0 +1,28 @@
+# Lemo Auto-Studio — channel settings (edit freely; every run reads this file)
+channel: "Aaj Kya Viral Hai"
+niche: daily viral topics as short cartoon explainers
+audience: Pakistan and India, ages 16-40
+voice_language: urdu          # urdu (edge-tts ur-PK if reachable, else Kokoro Hindi) | hindi | english
+subtitles: english            # burned in + .srt
+films_per_run: 1
+length_seconds: [40, 60]
+format: vertical-first        # Reels/Shorts 1080x1920; a 16:9 version for YouTube long
+styles_allowed:               # lemo-opuscar style folders, all in colour
+  rubber-hose: "funny, characters, weird news (in colour, not black-and-white)"
+  dataviz: "money, prices, numbers"
+  telestrator: "cricket and sport"
+  silkscreen-poster: "places, travel, cities"
+  security-xray: "weird objects, smuggling, mysteries"
+  midcentury-toon: "everyday life, explainers"
+  paper-popup: "festivals, culture"
+  isometric-picture-book: "how things work"
+safety_skip: [party politics, military and security, tragedy and deaths, religion controversy, mocking real people, other companies' brands and characters, medical advice]
+competitors: []               # add channel URLs, e.g. https://www.youtube.com/@somechannel
+platforms: [youtube, facebook, instagram]   # posted by .github/workflows/post.yml (official APIs)
+repo: wajidnaeem/lemo-auto-studio
+post_slots_pkt: ["19:30", "21:30"]
+approval: manual              # manual | auto-if-passed
+made_for_kids: false
+notify_email: from-run-prompt   # kept out of git; the scheduled task prompt gives it
+approval_board: https://claude.ai/artifact/QPvBZQvkGcAc4CPRRccJDK
+design_page: https://claude.ai/artifact/VuFuXoHV7T9LtvXenrfsnL

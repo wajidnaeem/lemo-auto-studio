@@ -1,0 +1,9 @@
+Badal aur Phool — third-party assets used in this film
+
+Voices: Kokoro-82M text-to-speech (hexgrad), Apache 2.0, via kokoro-onnx (MIT); Hindi voices hf_alpha, hm_psi, hm_omega.
+Music samples (CC0): FreePats project (freepats.zenvoid.org); VS Chamber Orchestra: Community Edition and
+  Versilian Community Sample Library (Versilian Studios).
+Fonts (SIL Open Font License 1.1, via Fontsource): Shrikhand (Jonny Pinhorn), Limelight (Eduardo Tunni),
+  IM Fell English SC (Igino Marini).
+Drawing engine (toon.js, film.js, ui.js, parts.js) adapted from the Lemo-Opuscar library's rubber-hose demo (MIT).
+Story, characters, score, sound effects and all drawings: original, made in code for this film.

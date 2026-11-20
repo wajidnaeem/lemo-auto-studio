@@ -1,0 +1,5 @@
+node_modules/
+*.mp4
+*.wav
+voices_raw/
+stills/
